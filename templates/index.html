@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Customer Support Bot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <style>
+        body {
+            background-image: url('https://images.unsplash.com/photo-1732783384071-0cdb7bbbad94');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            position: relative;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+        }
+
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(248, 249, 250, 0.8);
+            /* fade overlay */
+            z-index: -1;
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: space-around;
+            gap: 4%;
+            padding: 2% 3%;
+            height: 80vh;
+        }
+
+        .chat-section {
+            width: 40%;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 12px;
+            border: 1px solid #dee2e6;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 1rem;
+        }
+
+        .map-section {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+            background-color: white;
+            border-radius: 12px;
+            border: 1px solid #dee2e6;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+            padding: 1rem;
+        }
+
+        .chatbox {
+            flex: 1;
+            overflow-y: auto;
+            padding-right: 10px;
+            margin-bottom: 1rem;
+        }
+
+        .botText,
+        .userText {
+            display: flex;
+            align-items: flex-end;
+            margin-bottom: 12px;
+            max-width: 85%;
+        }
+
+        .botText .msg,
+        .userText .msg {
+            padding: 10px 14px;
+            border-radius: 15px;
+            font-size: 0.95rem;
+        }
+
+        .botText {
+            flex-direction: row;
+        }
+
+        .userText {
+            flex-direction: row-reverse;
+            margin-left: auto;
+            text-align: right;
+        }
+
+        .botText .msg {
+            background-color: #007bff;
+            color: white;
+            border-bottom-left-radius: 0;
+        }
+
+        .userText .msg {
+            background-color: #e2e3e5;
+            color: #212529;
+            border-bottom-right-radius: 0;
+        }
+
+        .chat-icon {
+            font-size: 1.4rem;
+            margin: 0 10px;
+            color: #6c757d;
+        }
+
+        #chatForm {
+            display: flex;
+            gap: 0.5rem;
+            align-items: center;
+        }
+
+        iframe {
+            flex: 1;
+            width: 100%;
+            border: none;
+            border-radius: 8px;
+        }
+
+        .map-controls {
+            margin-top: 0.5rem;
+        }
+
+        @media (max-width: 992px) {
+            .main-container {
+                flex-direction: column;
+                height: auto;
+            }
+
+            .chat-section,
+            .map-section {
+                width: 100%;
+                height: 70vh;
+            }
+        }
+
+        .output-files {
+            background-color: #f1f3f5;
+            padding: 1rem;
+            border-radius: 10px;
+            border: 1px solid #dee2e6;
+            max-height: 30%;
+            overflow-y: auto;
+        }
+
+        .file-list .list-group-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: none;
+            border-bottom: 1px solid #dee2e6;
+            padding: 0.5rem 0.75rem;
+            background-color: transparent;
+        }
+
+        .file-icon {
+            font-size: 1.2rem;
+            margin-right: 0.5rem;
+            color: #6c757d;
+        }
+
+        .download-link {
+            color: #0d6efd;
+            font-size: 1.1rem;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid py-3">
+        <h1 class="text-center mb-1"><b>Inferernce Flow - AI assisted Customer Support</b></h1>
+        <h5 class="text-center text-muted mb-3">
+            Checks status of Parcels and answer questions on Refund and Privacy policy
+        </h5>
+
+        <div class="main-container">
+            <!-- Chat Section -->
+            <div class="chat-section">
+                <div id="chatbox" class="chatbox">
+                    <div class="botText">
+                        <i class="fas fa-robot chat-icon"></i>
+                        <div class="msg">Hello, please ask your questions about status of your parcel or questions about
+                            refund or privacy here</div>
+                    </div>
+                </div>
+                <form id="chatForm" enctype="multipart/form-data">
+                    <input type="text" id="textInput" class="form-control" placeholder="Type a message..." />
+                    <button type="submit" class="btn btn-primary">
+                        Send
+                    </button>
+                </form>
+            </div>
+
+            <!-- Map Section -->
+            <div class="map-section">
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Script Block -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+$(document).ready(function () {
+
+    function getBotResponse() {
+        const text = $("#textInput").val().trim();
+
+        if (!text) {
+            alert("Please enter a message.");
+            return;
+        }
+
+        const userHtml =
+            '<div class="userText"><i class="fas fa-user chat-icon"></i><div class="msg">' +
+            text +
+            "</div></div>";
+
+        $("#textInput").val("");
+        $("#chatbox").append(userHtml);
+        $("#chatbox").scrollTop($("#chatbox")[0].scrollHeight);
+
+        fetch("/query", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify({ query: text }),
+        })
+        .then((res) => res.json())
+        .then((data) => {
+            const botHtml = `
+                <div class="botText">
+                    <i class="fas fa-robot chat-icon"></i>
+                    <div class="msg">${data.answer}</div>
+                </div>`;
+            $("#chatbox").append(botHtml);
+            $("#chatbox").scrollTop($("#chatbox")[0].scrollHeight);
+        })
+        .catch((err) => {
+            console.error("Error:", err);
+        });
+    }
+
+    $("#chatForm").on("submit", function (event) {
+        event.preventDefault();
+        getBotResponse();
+    });
+
+    $("#textInput").keypress(function (e) {
+        if (e.which == 13) {
+            e.preventDefault();
+            getBotResponse();
+        }
+    });
+
+});
+</script>
+</body>
+
+</html>

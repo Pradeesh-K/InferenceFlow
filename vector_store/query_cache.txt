@@ -1,0 +1,8 @@
+User: can i get a refund for sim card
+Bot: You have the right to revoke your contract and return your device within 30 days without giving any reason. However, please note that it is not possible to cancel the SIM contract or purchase of the device individually; you must cancel both the SIM contract and smartphone order together within that timeframe. If you have any questions about the SIM contract cancellation, please contact Vodafone customer service via 0800/172 12 12.
+User: is refund for sim card possible ?
+Bot: You have the right to revoke your contract and return your device within 30 days without giving any reason. However, it is not possible to cancel the SIM contract individually; you must cancel both the SIM contract and the smartphone order together. For questions about the SIM contract cancellation, please contact Vodafone customer service via 0800/172 12 12.
+User: my product with tracking id 715, give me details
+Bot: Found tracking ID 715: Status: Delayed, Location: Stuttgart, Expected Delivery: 2026-04-17
+User: i didnt receive my product
+Bot: Invalid tracking number provided.
