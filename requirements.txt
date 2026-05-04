@@ -1,0 +1,8 @@
+flask
+faiss-cpu
+numpy
+python-dotenv
+langchain-openai
+langchain-core
+prometheus_client
+openai

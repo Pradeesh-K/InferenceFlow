@@ -1,0 +1,15 @@
+groups:
+  - name: chatbot-alerts
+    rules:
+
+      - alert: HighTokenUsage
+        expr: |
+          sum(increase(input_tokens_total[1h]))
+          +
+          sum(increase(output_tokens_total[1h])) > 5000
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High token usage"
+          description: "Total token usage exceeded 5k in the last 1 hour"

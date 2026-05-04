@@ -6,3 +6,57 @@ User: my product with tracking id 715, give me details
 Bot: Found tracking ID 715: Status: Delayed, Location: Stuttgart, Expected Delivery: 2026-04-17
 User: i didnt receive my product
 Bot: Invalid tracking number provided.
+User: refund policy for watches
+Bot: For high-value watches and jewelry, you must use a special collection service for return shipping to Amazon. Returns are insured and can be traced. You can choose a 2-hour window for collection in the Returns Support Center, and our Customer Service will confirm the date. We will refund you or arrange for a replacement within 14 days after you notify us of the return.
+User: where is my package?
+Bot: Please provide your tracking ID so I can check your order status.
+User: can i return a luxury handbag
+Bot: Luxury Stores gladly accepts returns on all eligible items within 30 days of delivery and offers free return shipping. Please ensure that the item is returned in its original packaging and includes all product documentation. If a return label is not provided, please contact the Luxury Stores Customer Service.
+User: what is return policy of sim card?
+Bot: You have the right to revoke your SIM contract and return your device within 30 days without giving any reason. After a corresponding declaration, the Vodafone SIM contract you purchased with the device will be cancelled as soon as we receive the device from you. Vodafone will send you a confirmation once the SIM contract is cancelled. Please note that it is not possible to cancel the SIM contract or purchase of the device individually, but only cancel both - SIM contract and smartphone order - within 30 days.
+User: track order 123
+Bot: Tracking number not found, please provide the correct number.
+User: hello what is the status of my package number 145
+Bot: Found tracking ID 145: Status: OnTime, Location: Berlin, Expected Delivery: 2026-04-11
+User: how do i refund a luxury watch
+Bot: For a luxury watch, please contact the Luxury Stores Customer Service as a return label is not provided. We may monitor customer return activity and take appropriate action if account abuse is detected.
+User: what personal information is collected from my side
+Bot: Amazon collects personal information through various means, including information you provide, automatic information collected during your interactions with our website and services, and information from other sources. For more details, you can refer to our Privacy Notice.
+User: an i return an expensive handbag
+Bot: For returning an expensive handbag, please contact our Customer Service for a shipping bag and the appropriate return documents. Place the item and the completed documents in the shipping bag supplied. Seal the bag with the security seal provided. Notify us of the return by contacting the Returns Support Center.
+User: what is the deadline for returning product
+Bot: For heavy bulky items, you may be entitled to a refund within 30 days of delivery. After 30 days, you may be eligible for a repair, replacement, or refund. For other reasons for return, we may deduct a home collection fee of €50 from your refund.
+User: what is the number of days before i return a product
+Bot: Amazon, as well as Marketplace Sellers on Amazon.de, offer returns for a variety of items within 30 days of receipt of shipment. You will find the applicable conditions on our Returns Policies page.
+User: can i return sim card
+Bot: You have the right to revoke your contract and return your device within 30 days without giving any reason. Please note that it is not possible to cancel the SIM contract or purchase of the device individually, but only cancel both - SIM contract and smartphone order - within 30 days.
+User: how to return a sim
+Bot: You have the right to revoke your SIM contract and return your device within 30 days without giving any reason. After a corresponding declaration, the Vodafone SIM contract will be cancelled as soon as we receive the device from you. Please note that it is not possible to cancel the SIM contract or purchase of the device individually, but only cancel both within 30 days. If you have any questions about the SIM contract cancellation, please contact Vodafone customer service via 0800/172 12 12.
+User: can i refund autorip music
+Bot: If you cancel or return an album that supports AutoRip and you have already downloaded one or more songs from the MP3 version, this counts as the purchase of the MP3 version, and we will debit the price of the MP3 version using your payment at the time of cancellation or return. This amount is non-refundable. For more information, please refer to About AutoRip and the Conditions for Using AutoRip.
+User: amazon haul items can be returned or not
+Bot: Yes, Amazon Haul items can be returned with no return costs if the return is requested within 15 days of delivery, and the items are in new, unused, and unaltered condition. Returns must be initiated through our Returns Support Center.
+User: how about fuel powered equipments
+Bot: For fuel-powered equipment, such as lawn mowers or chainsaws, a special return process is required. You can arrange a return or repair by selecting here [external link]. Please ensure to remove any remaining fuel or other liquids, such as oil, from the equipment before returning it.
+User: can i return music cds
+Bot: You can return music CDs as long as they are in the same condition in which you received them. This means they must be new, unused, and complete. If they show any signs of use or damage, the return may be rejected or a portion of the refund may be deducted.
+User: what is return policy of pizza
+Bot: Because of its nature, some food and drink shipped by Amazon cannot be returned using the Returns Support Center. In such cases, you can get help with the return by contacting our Customer Service.
+User: what are my informaiton thats is collected
+Bot: Amazon collects your personal information in several ways: through information you provide, through automatic information, and from other sources. This helps improve your Amazon experience. For more details, please refer to our Privacy Notice.
+User: how is my information processed
+Bot: Amazon collects your personal information in various ways, including information you provide, automatic information from your interactions with our services, and information from other sources. We use this information to improve your experience, prevent fraud, and ensure security. For more details, please refer to our Privacy Notice.
+User: what are statutory rights i have
+Bot: Your statutory rights include the right of withdrawal, which allows you to return items under certain conditions. You can find the details of your statutory right of withdrawal in item 3 of our Conditions of Sale. Please note that if you exercise your right of withdrawal, you may be responsible for any diminished value of a returned item resulting from your handling of it.
+User: how to calculate return costs
+Bot: To calculate return costs, please note that the exact cost is displayed in the Returns Support Centre for each return method. If you use a pre-paid returns label for items that are not eligible for Free Return, the cost will be deducted from your refund unless the item is defective, damaged, or incorrect. You can find more details by visiting Your Orders.
+User: what items cant be returned
+Bot: Household textiles cannot be returned if used. Additionally, items must be returned in the same condition in which you received them. New items must be returned new, unused, and complete, while used items must not show any additional signs of use or damage.
+User: what are hazardous goods
+Bot: Hazardous goods are products that contain flammable, pressurized, corrosive, environmentally hazardous, or otherwise hazardous chemicals. These items must be labeled as hazardous when returned to ensure they are handled appropriately during shipping and at our logistics centers.
+User: can i return handmade products
+Bot: Products sold by Handmade Makers are subject to the standard A-to-z Guarantee policies for Amazon. However, items that are purchased with optional customization options, other than size and color, may have different return policies. Please ensure that any brand labels, guarantee cards, or certificates are left on or together with the product if you wish to return it.
+User: what happened to my product 169
+Bot: Found tracking ID 169: Status: Delayed, Location: Munich, Expected Delivery: 2026-04-17
+User: what if i accidentally return something
+Bot: If you have accidentally sent the wrong item to Amazon, please contact Customer Service as soon as possible. Amazon does not store mistakenly sent items and cannot guarantee your item will be found and returned. No compensation is provided for incorrect items sent to Amazon.

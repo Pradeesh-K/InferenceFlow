@@ -1,0 +1,10 @@
+global:
+  scrape_interval: 5s
+
+scrape_configs:
+  - job_name: "inferenceflow"
+    static_configs:
+      - targets: ["app:8000"]
+
+rule_files:
+  - "alerts.yml"
